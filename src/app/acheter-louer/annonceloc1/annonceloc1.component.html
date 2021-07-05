@@ -1,0 +1,233 @@
+<div class="l-container">
+    <div class="listing-page">
+        <div class="layout-with-contact-form">
+            <div class="layout-with-contact-form__content">
+                <!------------------------Carousel--------------------------------------------->
+                <section style="background-color:white;">
+                <ngb-carousel>
+                    <ng-template ngbSlide >
+                      <div class="picsum-img-wrapper">
+                        <img class="resize" src="assets/img/annonce1/a1.jpg">
+                      </div> 
+                    </ng-template>
+
+                    <ng-template ngbSlide>
+                      <div class="picsum-img-wrapper">
+                        <img class="resize" src="assets/img/annonce1/a2.jpg">
+                      </div>
+                    </ng-template>
+
+                    <ng-template ngbSlide>
+                      <div class="picsum-img-wrapper">
+                        <img class="resize" src="assets/img/annonce1/a3.jpg">
+                      </div>  
+                    </ng-template>
+
+                    <ng-template ngbSlide>
+                        <div class="picsum-img-wrapper">
+                          <img class="resize" src="assets/img/annonce1/a4.jpg">
+                        </div>  
+                      </ng-template>
+
+                      <ng-template ngbSlide>
+                        <div class="picsum-img-wrapper">
+                          <img class="resize" src="assets/img/annonce1/a5.jpg">
+                        </div>  
+                      </ng-template>
+                </ngb-carousel>
+                </section>
+<!----------------------------------informations------------------------------------------------->
+<div class="listing-informations">
+    <div  class="listing-informations__main-header">
+
+        <div  *ngFor="let item of AllAnnonce" class="margin-right">
+            <div class="listing-characteristic margin-bottom">
+                <div class="inline-block margin-right vertical-align-middle">
+                    {{item.bien.typeBien}} {{item.bien.nbPieces}}&nbsp;pièces - {{item.bien.surface}}&nbsp;m²
+                </div>
+                    
+                <div class="tag tag--red vertical-align-middle">
+                    Exclusivité
+                </div> 
+            </div>
+                
+            <div class="listing-city margin-bottom-double">
+                {{item.bien.ville}}, {{item.bien.codePostal}}
+            </div>
+        </div>
+
+        <div class="listing-actions listing-actions--listing-page">
+            <button class="btn btn--secondary btn--small">
+                <svg  width="17" height="13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.976 0H2.024C.906 0 0 1.015 0 2.267v8.466C0 11.985.906 13 2.024 13h12.952C16.094 13 17 11.985 17 10.733V2.267C17 1.015 16.094 0 14.976 0zM2.024.907h12.952c.583.002 1.083.465 1.194 1.106L8.5 6.802.83 2.013C.94 1.373 1.44.91 2.024.907zm12.952 11.182H2.024c-.67-.003-1.213-.61-1.214-1.36V3.037l7.492 4.68c.06.037.129.057.198.058.07.001.138-.02.198-.059l7.492-4.679v7.69c0 .751-.543 1.36-1.214 1.36z" fill="#1432be" fill-rule="nonzero"/>
+                </svg>
+                <span class="vertical-align-middle">
+                    Partager
+                </span>
+            </button>
+
+            <button class="btn btn--secondary btn--small margin-left no-margin-small">
+                <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 29">
+                    <path d="M13.04 25.556C5.76 18.91 1 14.433 1 8.944 1 4.467 4.36 1 8.7 1c2.38 0 4.76 1.156 6.3 3.033C16.54 2.156 18.92 1 21.3 1 25.64 1 29 4.467 29 8.944c0 5.49-4.76 9.967-12.04 16.612L15 27.578l-1.96-2.022z" stroke="#1432be" stroke-width="2" fill="none" fill-rule="evenodd"/>
+                </svg>                            
+                <span class="listing-actions__item-text">
+                    Enregistrer
+                </span>
+            </button>
+        </div>
+    </div>
+        
+    <div *ngFor="let item of AllAnnonce" style="color: #3a3a3a;">
+        {{item.bien.adresse}} <br><br>
+    </div>
+
+    <ul *ngFor="let item of AllAnnonce" class="listing-facts flex flex-wrap">
+        <li class="listing-facts__item">
+            Terrain {{item.bien.surface}}&nbsp;m²
+        </li>
+
+        <li class="listing-facts__item">
+            {{item.bien.nbPieces}}&nbsp; pièces
+        </li>
+
+        <li class="listing-facts__item">
+            {{item.bien.nbSalleDeBain}}&nbsp; salle de bain
+        </li>
+
+        <li class="listing-facts__item">
+            Jardin :&nbsp; {{item.bien.jardin}}
+        </li>
+    </ul>
+
+    <div class="flex flex-wrap">
+        <div class="flex-grow margin-bottom-double">
+            <div class="dpe-title">
+                Diagnostic de performance énergétique
+            </div>
+            <div class="dpe">
+                <div class="dpe-item dpe-a">A</div>
+                <div class="dpe-item dpe-b">B</div>
+                <div class="dpe-item dpe-c">C</div>
+                <div class="dpe-item dpe-d">D</div>
+                <div class="dpe-item dpe-e active">E</div>
+                <div class="dpe-item dpe-f">F</div>
+                <div class="dpe-item dpe-g">G</div>
+            </div>
+        </div>
+
+        <div class="flex-grow margin-bottom-double">
+            <div class="ges-title">
+                Indice d'émission de gaz à effet de serre
+            </div>
+
+            <div class="ges margin-bottom-quadruple">
+                <div class="ges-item ges-a">A</div>
+                <div class="ges-item ges-b">B</div>
+                <div class="ges-item ges-c">C</div>
+                <div class="ges-item ges-d">D</div>
+                <div class="ges-item ges-e">E</div>
+                <div class="ges-item ges-f active">F</div>
+                <div class="ges-item ges-g">G</div>
+            </div>
+        </div>
+    </div>
+    
+    <div *ngFor="let item of AllAnnonce" class="hide-md hide-lg margin-top-double">
+        <div class="listing-informations__title margin-bottom">
+            Bien proposé par
+        </div>
+    
+        <div class="flex flex-center">                    
+            <div style="color:#1432be;" class="text--black text--bold margin-left-double">
+                {{item.nomProprietaire.username}}
+            </div>
+        </div>
+    </div>
+
+    <div *ngFor="let item of AllAnnonce" class="hide-md hide-lg margin-top-double">
+        <div class="listing-informations__title margin-bottom">
+            Publié le
+        </div>
+    
+        <div class="flex flex-center">                    
+            <div style="color:#1432be;" class="text--black text--bold margin-left-double">
+                {{item.datePublierAnnonce}}
+            </div>
+        </div>
+    </div>
+</div>
+ <!--------------------------------------CONTACT--------------------------------------------------------->
+             
+            <div class="layout-with-rdv-form">
+                <div class="layout-with-rdv-form__form" style="width: 100%; margin-left: 20px;">
+                    <div>
+                        <div style="width: 90%;  position: relative; margin-left: 5%; " class="contact-form contact-form--listing">
+                            <div class="margin-bottom-double">
+                                <h3 class="title--h3 text--center margin-bottom-quadruple">    
+                                    Prenez un rendez-vous directement !
+                                </h3>
+                            </div>
+
+                            <form [formGroup]="myForm" (ngSubmit)="mailRdv()">
+                                <label>
+                                    Votre Objet
+                                </label>
+                                <div class="field field--prefixed form-group">
+                                    <div class="field__control-wrapper">
+                                        <div class="field__prefix field__prefix--no-border">
+                                            <i style="color: #525f7f;" class="fas fa-paper-plane"></i>
+                                        </div>
+                                        <input class="field__control required" id="object" name="object" placeholder="Demande de planification d'une réunion dans les meilleurs délais" type="text" formControlName="objectRdv">
+                                    </div>
+                                </div>
+    
+                                <label>
+                                    Votre Text
+                                </label>
+                                <div style="border: 1px solid rgb(227, 227, 227); padding: .4rem;">
+                                    <label>
+                                        Sélectionner une date
+                                    </label>
+                                    <div class="field field--prefixed form-group">
+                                        <div class="field__control-wrapper">
+                                            <div class="field__prefix field__prefix--no-border">
+                                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" class="svg-inline--fa fa-calendar fa-w-14" role="img" viewBox="0 0 448 512">
+                                                    <path fill="currentColor" d="M400 64h-48V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H160V12c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v52H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zm-6 400H54c-3.3 0-6-2.7-6-6V160h352v298c0 3.3-2.7 6-6 6z"/>
+                                                </svg>
+                                            </div> 
+                                            <input class=" field__control required" name="name" placeholder="Picker une date" type="date" formControlName="date">
+                                        </div>
+                                    </div>
+    
+                                    <label>
+                                        À quelle heure ?
+                                    </label>
+                                    <div class="field field--prefixed form-group">
+                                        <div class="field__control-wrapper">
+                                            <div class="field__prefix field__prefix--no-border">
+                                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="clock" class="svg-inline--fa fa-clock fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                    <path fill="currentColor" d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/>
+                                                </svg>
+                                            </div>
+                                            <input class=" field__control required" name="name"  placeholder="13:00" type="text"  formControlName="heure"> 
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                 <button type="submit" class="btn btn--primary btn--full-width margin-top">
+                                    On se verra?              
+                                 </button>
+                                 <p style="margin-top: 20px;">
+                                    * Après avoir sélectionner la date et l'heure qui vous convient, Nous prendrons la responsabilité de correspondre entre vous et le propriétaire de ce bien.
+                                    <br>
+                                    Vous recevez un mail le plutôt possible  dans lequel la confirmation de votre rendez-vous.
+                                </p>
+                            </form> 
+
+                        </div>                   
+                    </div>
+                </div> 
+            </div> 
+        </div>
+    </div>
+</div>

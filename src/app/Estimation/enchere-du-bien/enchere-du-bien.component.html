@@ -1,0 +1,61 @@
+<div class="progress-bar">
+    <div class="progress-bar__filled"></div>
+</div>
+
+<div class="full-height-viewport">
+    <div class="header__title">Étape 3 : vente aux enchéres un bien</div>
+    <header class="landing-hero landing-hero--realtors landing-hero--realtors-all">
+
+        <div class="landing-hero__container landing-hero__container--realtors">
+
+            <h1 class="landing-hero__title landing-hero__title--shadowed">
+                Fixer la mise à prix du vos bien (Facultatif)
+            </h1>
+
+            <form class="realtors-search-form" [formGroup]="myForm">
+                <div class="realtors-search-form__field field field--vertical">
+                    <label for="prix" class="field__label" id="prix">Le montant de la mise à prix fixé</label>
+                    <span class="twitter-typeahead form-group">
+                        <input class="field__control form-control" name="prix" id="prix" type="text"
+                            placeholder="Ex: 80.000dt" formControlName="prix">
+                    </span>
+                    <div *ngIf="prix.touched && prix.invalid">
+                        <small *ngIf="prix.errors.pattern" class="text-danger"> Prix doit être valide</small>
+                    </div>
+                </div>
+
+                <div class="realtors-search-form__separator"></div>
+                <div class="realtors-search-form__field field field--vertical">
+                    <label for="debut" class="field__label" id="debut">Date de départ de l'enchére</label>
+                    <span class="twitter-typeahead form-group">
+                        <input class="field__control form-control" name="debut" id="debut" type="date"
+                            placeholder="01/05/2021" formControlName="dateDebut">
+                    </span>
+                    <div *ngIf="dateDebut.touched && dateDebut.invalid">
+                        <small *ngIf="dateDebut.errors.pattern" class="text-danger"> Date début doit contenir date
+                            valide</small>
+                    </div>
+                </div>
+
+                <div class="realtors-search-form__separator"></div>
+                <div class="realtors-search-form__field field field--vertical">
+                    <label for="fin" class="field__label" id="fin">Date de fin de l'enchére</label>
+                    <span class="twitter-typeahead form-group">
+                        <input class="field__control form-control" name="fin" id="fin" type="date"
+                            placeholder="01/15/2021" formControlName="dateFin">
+                    </span>
+                    <div *ngIf="dateFin.touched && dateFin.invalid">
+                        <small *ngIf="dateFin.errors.pattern" class="text-danger"> Date fin doit contenir date
+                            valide</small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button class="realtors-search-form__submit btn btn--primary btn--small" (click)="addAnnonce()">
+                        Déposer
+                    </button>
+                </div>
+            </form>
+        </div>
+    </header>
+</div>

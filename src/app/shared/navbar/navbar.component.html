@@ -1,0 +1,87 @@
+<!--
+      navbar permet d'ajouter une barre de navigation à un site web.   
+      navbar-expand-* va nous permettre d'indiquer à partir de quelle
+      taille de fenêtre tous les textes de notre barre de navigation 
+      doivent être affichés.{  -sm  ,  -md ,  -lg ,  -xl  }
+      navbar-brand pour la marque est affichée le long de la barre de navigation  
+      La classe Container, qui hérite de Component est capable
+      de contenir d'autres objets graphiques.
+      On va pouvoir ajouter une classe .navbar-expand à l’élément portant la classe 
+      .navbar pour afficher le menu en ligne. 
+      SVG est un format d'images vectorielles basé sur le langage de balisage XML
+    -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container">
+    
+        <a class="navbar-brand mr-md-5" [routerLink]="['/home']">
+          <img src="./assets/img/Homee_Logo.jpg">
+        </a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+
+          </span>
+        </button>
+        
+        <div class="navbar-collapse collapse" id="navbar_global">
+    
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+            <li class="nav-item" >
+              <a href="#" class="nav-link" style="color:#000;font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;">Home</a>
+            </li>
+           
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="nav-link-inner--text mb-md-8" style="color:#000;font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;">Déposer un bien </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a [routerLink]="['/enligne']" class="dropdown-item mb-md-1" style="color:rgba(51, 175, 199, 255);">Déposer en ligne</a>
+                <a [routerLink]="['/paragence']" class="dropdown-item mb-md-1" style="color:rgba(51, 175, 199, 255);">Déposer par une agence</a>  
+                <a [routerLink]="['/pourquoi']" class="dropdown-item mb-md-1" style="color:rgba(51, 175, 199, 255);">Gestion Locative en Ligne ou Agence de Location Classique ?</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="nav-link-inner--text mb-md-1" style="color:#000;font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;">Acheter-Louer </span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a  [routerLink]="['/vente']" class="dropdown-item mb-md-1" style="color:rgba(51, 175, 199, 255);" >Annonces de vente</a>
+                <a  [routerLink]="['/location']" class="dropdown-item mb-md-1" style="color:rgba(51, 175, 199, 255);">Annonces de location</a>
+                <a  [routerLink]="['/comment']" class="dropdown-item mb-md-1" style="color:rgba(51, 175, 199, 255);">Comment réussir votre vente ?</a>
+              </div>
+            </li>
+
+          </ul>
+    
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+     
+            <li class="nav-item" *ngIf ='!isConnected()'>
+              <a [routerLink]="['/login']" class="nav-link" style="color:#000;"> 
+                <img src="./assets/img/loginIcon.png" width="16" height="16" alt="SignInIcon">
+                Se connecter
+              </a>
+            </li>
+            
+            <li class="nav-item" *ngIf ='isConnected()' (click) = 'logout()'>
+              <a [routerLink]="['/login']" class="nav-link" style="color:#000;"> 
+                <img src="./assets/img/canvas.png" width="16" height="16" alt="SignOutIcon">
+                Se déconnecter
+              </a>
+            </li>
+    
+            <li class="nav-item">
+              <a [routerLink]="['/apropos']" class="nav-link" style="color:#000;font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;">À propos</a>
+            </li>
+    
+            <li class="nav-item">
+              <a [routerLink]="['/contact']" class="nav-link" style="color:#000;font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;">Contact</a>
+            </li>  
+          </ul>
+        </div>
+        
+      </div>
+    </nav>

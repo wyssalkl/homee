@@ -1,0 +1,195 @@
+.progress-bar {
+    background: #e2e2e2;
+    height: .5333333333rem;
+    position: relative;
+    top: .1rem;
+    width: 100%;
+    z-index: 10;
+}
+.progress-bar__filled {
+    background: linear-gradient(270deg,#4aa7ff,#0074e4);
+    height: 8px;
+    transition: width .3s ease-out;
+    width: 70%;
+}
+.full-height-viewport {
+    height: 50.5vh;
+}
+.header__title {
+    font-family: "WorkSans",-apple-system,blinkmacsystemfont,"Segoe UI",roboto,oxygen,ubuntu,cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-weight: 500;
+    color: black;
+    margin-left: 2.1333333333rem;
+    margin-top: .6333333333rem;
+    margin-bottom: .6333333333rem;
+}
+
+.landing-hero--realtors {
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 1.0666666667rem;
+    position: relative;
+}
+.landing-hero {
+    background-image: url(/assets/img/enchére.jpg);
+    background-position: 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 24.2rem;
+    justify-content: center;
+    text-align: center;
+}
+.landing-hero--realtors-all::before {
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+.landing-hero--realtors-all> * {
+    z-index: 1;
+}
+
+.landing-hero__container--realtors {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.landing-hero__title--shadowed {
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.8666666667rem;
+    font-weight: 500;
+    line-height: 2.6666666667rem;
+    color: #fff;
+    max-width: 54.2rem;
+    padding: 0 1.0666666667rem 2.6666666667rem;
+    text-shadow: 0 2px 2px rgba(0,0,0,.2);
+    margin: 0 auto;
+}
+.realtors-search-form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: none;
+    margin: 0 auto;
+}
+.realtors-search-form__field {
+    min-width: 20rem;
+    margin-bottom: 0;
+    text-align: left;
+}
+.field--vertical {
+    align-items: stretch;
+    flex-direction: column;
+}
+.field {
+    display: flex;
+}
+.field--vertical .field__label {
+    flex: inherit;
+    line-height: 1.4rem;
+    padding: 0 0 .2666666667rem;
+}
+.field__label {
+    font-size: .9333333333rem;
+}
+.twitter-typeahead {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    direction: ltr;
+}
+
+.field__control {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-color: transparent;
+    box-shadow: none;
+    opacity: 1;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    -webkit-appearance: none;
+    border: 1px solid #e2e2e2;
+    border-radius: .2rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 15px;
+    height: 2.8rem;
+    outline: none;
+    padding: .6666666667rem;
+    width: 100%;
+}
+input {
+    overflow: visible;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.realtors-search-form__separator {
+    align-self: flex-end;
+    line-height: 3.2rem;
+    margin-left: .5666666667rem;
+    margin-right: .5666666667rem;
+}
+.realtors-search-form__submit {
+    align-self: flex-end;
+    margin-left: 1.0666666667rem;
+    margin-bottom: 1rem;
+}
+.btn--primary {
+    background-color: #1432be;
+    border-color: #1432be;
+    color: #fff;
+}
+.btn--small {
+    font-size: .8666666667rem;
+    font-weight: 600;
+    line-height: 1rem;
+    padding: .8rem;
+}
+.btn {
+    border: 1px solid transparent;
+    border-radius: .2rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    min-width: 9.6666666667rem;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+}
+button {
+    -webkit-appearance: button;
+    margin-top: 6rem;
+    text-transform: none;
+    overflow: visible;
+}
+
+@media (max-width: 992px) {
+    .realtors-search-form {
+        flex-direction: column;
+    }
+    .realtors-search-form__submit {
+        margin: 2rem 0 0;
+    }
+    .realtors-search-form__field {
+        margin: 2rem 0;
+    }
+    .landing-hero__title--shadowed {
+        padding: 0;
+    }
+    .landing-hero {
+        height: auto;
+        min-height: 30rem;
+    }
+    .full-height-viewport {
+        height: auto;
+    }
+}
+

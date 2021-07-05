@@ -1,0 +1,41 @@
+<div class="fourthPage">
+    <div class="post-header"></div>
+    <div class="container container-col NewsletterContainer">
+        <section class="the_post">
+            <h1 class="title_page"> <center>Newsletter</center></h1>
+            <h4> <center>Recevez tous les mois les infos clés sur le marché de l'immobilier</center></h4>
+            
+            <div class="content content_new">
+               <p>Vous êtes propriétaire, vendeur, acheteur ou simplement curieux du marché immobilier ? Tout ce que vous devez savoir se trouve ici.</p>
+            </div>
+
+            <form [formGroup]="myForm" (ngSubmit)="myNewsletter()">
+                <div class="form-group">
+                    <label for="exampleInputText" class="text-white">Nom et prénom</label>
+                    <input type="text" class="form-control" id="exampleInputText" placeholder="Nom et prénom" formControlName="exampleInputText">
+                    <div *ngIf="exampleInputText.touched && exampleInputText.invalid">
+                        <small *ngIf="exampleInputText.errors.required" class="text-danger">Nom et Prénom est requis </small><br>
+                        <small *ngIf="exampleInputText.errors.pattern" class="text-danger">Nom et Prénom est invalide</small><br>
+                        <small *ngIf="exampleInputText.errors.minlength" class="text-danger">Le nom et prénom doit contenir au moins 8 caractères</small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail" class="text-white">Adresse Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Entrer votre email" formControlName="exampleInputEmail">
+                  <div *ngIf="exampleInputEmail.touched && exampleInputEmail.invalid">
+                    <small *ngIf="exampleInputEmail.errors.required" class="text-danger">Email est requis</small><br>
+                    <small *ngIf="exampleInputEmail.errors.pattern" class="text-danger">Email est invalide</small>
+                </div>
+                </div><br>
+
+                <div class="form-group">
+                    <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary">Je m'inscris à la Newsletter*</button>
+                </div>
+            </form>
+
+            <small id="Help" class="form-text text-muted" class="text-white">* En cliquant sur "Je m'inscris à la Newsletter", j'accepte les conditions générales d'utilisation et la politique de confidentialité de Homee. </small>
+            <div style="height: 100px; background-color: #022954;"></div>
+        </section> 
+    </div>
+</div>

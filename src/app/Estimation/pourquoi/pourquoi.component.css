@@ -1,0 +1,48 @@
+.howto-hero--estima-success {
+    background-image: url(/assets/img/pexels-alena-darmel-7642083.jpg);
+    background-position: 30%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 30.2rem;
+    justify-content: center;
+    text-align: center;
+}
+.howto-hero__title {
+    color: #fff;
+    margin: 2.0666666667rem 0 2.1333333333rem;
+}
+.howto-hero--estima-success::before {
+    background: rgba(0,0,0,.5);   
+    content: "";
+    bottom: 5.8rem;
+    left: 0;
+    right: 0;
+    top: 5.4rem;
+    position: absolute;
+    z-index: 0;
+}
+* > .howto-hero__title {
+    z-index: 1;
+}
+.text--h1, .title--h1 {
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.8666666667rem;
+    font-weight: 500;
+    line-height: 2.1333333333rem;
+}
+.howto-catchphrase {
+    margin: auto;
+    max-width: 61.5333333333rem;
+    padding: 5.1333333333rem 2.1333333333rem 1.0666666667rem 1.0666666667rem;
+    color: #3a3a3a;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.DS--underline {
+    color: rgba(51, 175, 199, 255);
+    text-decoration: none;
+    background-color: transparent;
+}

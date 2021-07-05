@@ -1,0 +1,88 @@
+<div id="content-id" class="page-container">
+    <aside class="side-container">
+        <ul class="list side-container__menu">
+            <li class="list-item list-item--active">
+                <a [routerLink]="['/espaceConnecté']" class="link link--no-underline list-item__content list-item__content--button">
+                    <div class="list-item-text">
+                        <span class="list-item-text__primary">Tableau de bord</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="list-item">
+                <a [routerLink]="['/Profil']" class="link link--no-underline list-item__content list-item__content--button">
+                    <div class="list-item-text">
+                        <span class="list-item-text__primary">Profil</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="content-wrapper">
+
+        <div [routerLink]="['/espaceConnecté']" class="full-width">
+            <div class="content-header">
+                <h1 class="title title--h1">Bonjour Ghada</h1>
+            </div>
+
+            <section class="dashboard-section">
+                <h2 class="title title--h2 dashboard-section__title">Projet de vente/location</h2>
+                <div class="dashboard-section__header">
+                    <a class="button button--primary button--large button--outlined habitations-section__link"  href="#">
+                        <span [routerLink]="['/enligne']" class="button__content">
+                            <span class="button__icon button__icon--start-icon">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="258" x2="512" y2="258" gradientTransform="matrix(1 0 0 -1 0 514)">
+                                        <stop offset="0" style="stop-color:#00F2FE"/>
+                                        <stop offset="0.021" style="stop-color:#03EFFE"/>
+                                        <stop offset="0.293" style="stop-color:#24D2FE"/>
+                                        <stop offset="0.554" style="stop-color:#3CBDFE"/>
+                                        <stop offset="0.796" style="stop-color:#4AB0FE"/>
+                                        <stop offset="1" style="stop-color:#4FACFE"/>
+                                    </linearGradient>
+                                    <path style="fill:url(#SVGID_1_);" d="M492,236H276V20c0-11.046-8.954-20-20-20s-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20  c0,11.046,8.954,20,20,20h216v216c0,11.046,8.954,20,20,20c11.046,0,20-8.954,20-20V276h216c11.046,0,20-8.954,20-20  S503.046,236,492,236z"/>
+                                </svg>
+                            </span>
+                            Déposer un nouveau bien
+                        </span>
+                    </a>   
+                </div>
+
+                <div class="habitation-card-list">
+                    <div class="card card--elevation-1 habitation-card">
+                        <p class="text text--m text--bold habitation-card__address">
+                            Avenue de la Liberté, Dar Chaabane Al Fehri
+                        </p>
+                        <ul class="tags-wrapper habitation-tags habitation-card__tags">
+                            <li class="tag tag--neutral-30 tag--outlined">
+                                <span class="tag__text">240m²</span>
+                            </li>
+                            <li class="tag tag--neutral-30 tag--outlined">
+                                <span class="tag__text">1 pièce</span>
+                            </li>
+                        </ul>
+                        <p class="text text--m text--complementary margin-bottom-half">Le montant de la mise à prix fixé </p>
+                        <p class="text text--l text--bold habitation-card__price">80 000&nbsp;dt</p>
+
+                        <div class="dashboard-section__edit">
+                            <a style="margin-left: 3rem;" class="button button--primary button--large button--outlined habitations-section__link">
+                                <span class="button__content">
+                                    Modifier le bien
+                                </span>
+                            </a>
+                            <a style="margin-left: 1rem;" class="button button--primary button--large button--outlined habitations-section__link">
+                                <span class="button__content">
+                                    Supprimer le bien
+                                </span>
+                            </a>
+                        </div>
+                    </div> 
+                </div>
+            </section>
+        </div>
+
+        <div [routerLink]="['/Profil']" class="full-width hide">     
+        </div>
+    </div>
+</div>

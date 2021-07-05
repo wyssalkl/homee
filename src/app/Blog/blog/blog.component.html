@@ -1,0 +1,87 @@
+<div class="aidePage">
+
+    <div class="cover cover-small cover-bg-team-7">
+        <div class="wrapper">
+            <p class="h1 h-alt-2 no-margin">Les articles d'Homee</p>
+            <p class="margin-bottom-10" style="padding: 15px 0px;">Votre dose de tips pour réussir votre vente !</p>
+        </div>
+    </div>
+
+    <section class="last_posts">
+        <p class="title_sec">
+            <strong>Les dernières actualités</strong>
+        </p>
+
+        <article>
+            <a [routerLink]="['/first']">
+                <picture>
+                    <source srcset="./assets/img/1.jpg" media="(max-width: 768px)">
+                    <img src="./assets/img/1.jpg">
+                </picture>
+            </a>
+            <p class="meta">
+                <span class="timing">7 min.</span> 
+            </p>
+            <h2>
+                <a [routerLink]="['/first']">Achat immobilier : 5 points avant de signer</a>
+            </h2>
+            <p>Êtes-vous certain que ce logement qui semble répondre à vos besoins et vos envies sera votre prochain achat ? Voici quelques points à checker pour vous assurer que votre futur investissement ne vous réserve pas de déconvenues.</p>
+        </article>
+
+        <article>
+            <a [routerLink]="['/second']">
+                <picture>
+                    <source srcset="./assets/img/15.jpg" media="(max-width: 768px)">
+                    <img src="./assets/img/15.jpg">
+                </picture>
+            </a>
+            <p class="meta">
+                <span class="timing">7 min.</span>
+            </p>
+            <h2>
+                <a [routerLink]="['/second']">Tout savoir sur la location meublée</a>
+            </h2>
+            <p>Depuis de nombreuses années, la location meublée séduit les propriétaires-bailleurs. Le marché de la location principale meublée a explosé. L’offre est importante aujourd’hui. Découvrons ensemble l’intérêt de la location meublée.</p>
+        </article>
+
+        <article>
+            <a [routerLink]="['/third']">
+                <picture>
+                    <source srcset="./assets/img/16.jpg" media="(max-width: 768px)">
+                    <img src="./assets/img/16.jpg" >
+                </picture>
+            </a>
+            <p class="meta">
+                <span class="timing">5 min.</span>
+            </p>
+            <h2>
+                <a [routerLink]="['/third']">Les 3 critères pour choisir le bon acheteur</a>
+            </h2>
+            <p>Lorsque l’on vend son bien immobilier, il est tout à fait normal et légitime de se questionner sur le candidat faisant une offre d’achat : ira-t-il au bout de son achat ? Est-il fiable ? Situation qui devient d’autant plus complexe lorsque vous recevez non pas une mais plusieurs offres simultanément.</p>
+        </article>
+
+        <article>
+            <a [routerLink]="['/fourth']">
+                <picture>
+                    <source srcset="./assets/img/17.jpg" media="(max-width: 768px)">
+                    <img src="./assets/img/17.jpg">
+                </picture>
+            </a>
+            <p class="meta">
+                <span class="timing">5 min.</span>
+            </p>
+            <h2>
+                <a [routerLink]="['/fourth']">Comment vendre un bien en indivision ?</a>
+            </h2>
+            <p>Vous venez d’hériter d’un bien et vous êtes en indivision avec vos frères et sœurs mais vous préférez des liquidités. Vous avez acheté en indivision un bien avec votre « moitié » mais la lune de miel est un lointain passé. Comment faire pour vendre, vous séparer de ce patrimoine familial, de cette propriété commune ?</p>
+        </article>
+
+    </section>
+    
+    <section class="widget widget_newsletter">
+        <p class="title_widget">Newsletter</p>
+        <p>Abonnez-vous à notre newsletter</p>
+        <a class="button button-second" [routerLink]="['/newsletter']">S'inscrire</a>
+    </section>
+    
+</div>

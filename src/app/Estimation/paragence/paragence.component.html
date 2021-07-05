@@ -1,0 +1,116 @@
+<!-- Header -->
+<header class="landing-hero landing-hero--realtors landing-hero--realtors-all">
+    <div class="landing-hero__container landing-hero__container--realtors">
+
+        <h1 class="landing-hero__title landing-hero__title--shadowed">
+            Comparez les agences pour votre projet
+        </h1>
+
+        <form class="realtors-search-form" [formGroup]="myForm">       
+            <div class="realtors-search-form__field field field--vertical form-group">
+                <label for="ville" class="field__label" id="ville">Ville</label>
+                <span class="twitter-typeahead">
+                    <input class="field__control tt-input form-control" name="ville" type="text" placeholder="Nabeul" formControlName="ville">
+                </span> 
+            </div>
+            <button (click)="goAgences()" type="button" [disabled]="myForm.invalid" class="form-group realtors-search-form__submit btn btn--primary btn--small">
+                Rechercher
+            </button>
+        </form> 
+
+        <div *ngIf="ville.touched && ville.invalid" style="margin-right: 25rem;">
+            <small *ngIf="ville.errors.pattern" class="text-danger"> Ville est invalide</small><br>
+            <small *ngIf="ville.errors.minlength" style="margin-left: 10rem;" class="text-danger"> Le ville doit contenir au moins 4 caractères</small>
+        </div>      
+    </div>   
+</header>
+
+<!-- Section2 -->
+<section class="landing-content landing-content--incentives">
+    <div class="landing-content__container landing-content__container--incentives">
+        <div class="landing-incentive">
+            <img src="./assets/img/Trouver une agence.svg" class="landing-incentive__img" alt="" width="100%">
+            <p class="landing-incentive__text">Entrez en relation gratuitement avec des professionnels</p>
+        </div>
+        <div class="landing-incentive">
+            <img src="./assets/img/calendrier.svg" class="landing-incentive__img" alt="" width="100%">
+            <p class="landing-incentive__text">Prenez RDV avec les professionnels les plus pertinents</p>
+        </div>
+        <div class="landing-incentive">
+            <img src="./assets/img/Temps.svg" class="landing-incentive__img" alt="" width="100%">
+            <p class="landing-incentive__text">Gagnez du temps et abordez sereinement votre projet</p>
+        </div>
+    </div>
+</section>
+
+<!-- Section2-->
+<section class="landing-content landing-content--realtors landing-content--secondary">
+    <h2 class="title--h1 landing-content__slogan landing-content__slogan--realtors">Trouver le professionnel de l'immobilier qui correspond le mieux à votre projet</h2>
+    
+    <div class="landing-content__container landing-content__container--steps">
+
+        <picture class="landing-content__img landing-content__img--steps">
+            <img src="./assets/img/pexels-kampus-production-6248948.jpg" alt="Agent immobillier et couple de propriétaires vendeurs">
+        </picture>
+
+        <div class="landing-incentives-container">
+            <div class="landing-incentive landing-incentive--small">
+                <img src="./assets/img/Bien vendu.svg" class="landing-incentive__img" alt="" width="100%">
+                <p class="landing-incentive__text">Les dernières ventes similaires réalisées près de chez vous</p>
+            </div>
+            <div class="landing-incentive landing-incentive--small">
+                <img src="./assets/img/home-realtors-stars.svg" class="landing-incentive__img" alt="" width="100%">
+                <p class="landing-incentive__text">Les avis de vendeurs ayant fait appel à ces professionnels</p>
+            </div>
+            <div class="landing-incentive landing-incentive--small">
+                <img src="./assets/img/icon-contact-pin.svg" class="landing-incentive__img" alt="" width="100%">
+                <p class="landing-incentive__text">Les professionnels situés à proximité de votre bien</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!--Section3-->
+<section class="landing-content landing-content--directory">
+    <div class="directory directory--landing">
+        <h2 class="title--h2 directory__title">Professionnels de l'immobilier dans les grandes gouvernorats de Tunisie</h2>
+        <div class="flex flex-wrap padding-bottom-double padding-top-double">
+        
+            <ul class="list-link list-link--directory">
+                <li><a href="#">Ariana</a></li>
+                <li><a href="#">Béja</a></li>
+                <li><a href="#">Ben Arous</a></li>
+                <li><a href="#">Bizerte</a></li>
+                <li><a href="#">Gabes</a></li>
+                <li><a href="#">Gafsa</a></li>
+                <li><a href="#">Jendouba</a></li>    
+                <li><a href="#">Kairouan</a></li>    
+            </ul>
+
+            <ul class="list-link list-link--directory">
+                <li><a href="#">Kasserine</a></li>
+                <li><a href="#">Kebili</a></li>
+                <li><a href="#">La Manouba</a></li>
+                <li><a href="#">Le Kef</a></li>
+                <li><a href="#">Mahdia</a></li>
+                <li><a href="#">Médenine</a></li>
+                <li><a href="#">Monastir</a></li>    
+                <li><a href="#">Nabeul</a></li>    
+            </ul>
+
+            <ul class="list-link list-link--directory">
+                <li><a href="#">Sfax</a></li>
+                <li><a href="#">Sidi Bouzid</a></li>
+                <li><a href="#">Siliana</a></li>
+                <li><a href="#">Sousse</a></li>
+                <li><a href="#">Tataouine</a></li>
+                <li><a href="#">Tozeur</a></li>
+                <li><a href="#">Tunis</a></li>    
+                <li><a href="#">Zaghouan</a></li>    
+            </ul>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,30 @@
+
+.section {
+    background-color: #f2f3f4;
+}
+.home-pro--alternative {
+    padding: 4.8rem 1.0666666667rem;
+}
+.home-pro {
+    color: #fff;
+    text-align: center;
+}
+.home-pro__title--alternative {
+    margin-bottom: 1.0666666667rem;
+}
+.title--h1 , .title--h4{
+    margin-top: 0;
+    color: #3a3a3a;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.8666666667rem;
+    font-weight: 500;
+    line-height: 2.1333333333rem;
+}
+.title--h4 {
+    font-size: 1.1333333333rem;
+}
+.home-pro__subtitle--alternative {
+    margin-bottom: 2.6666666667rem;
+}
+
+

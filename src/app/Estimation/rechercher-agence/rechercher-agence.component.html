@@ -1,0 +1,105 @@
+<!--Section2 -->
+<div class="realtors-search-container margin-top">          
+    <div class="featured-realtors-container--row hide"></div>
+</div>
+
+<div class="loading-wrapper">   
+    <div class="realtors-search-container margin-bottom margin-top-double margin-top-sm no-padding-bottom-sm">
+        <div class="flex flex-right">
+            <div class="flex flex-column btn--full-width-sm">
+                <label for="realtors-sort">Trier par</label>
+                <select style="width: 230px;" class="field__control field__control--select" id="realtors-sort">    
+                    <option value="">Nombre de ventes récentes</option>
+                    <option value="">Avis positives</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!--Section3 -->
+    <div class="realtors-search-container realtors-search-container--result">
+        <div data-realtor-list-content="">   
+            <div class="DS-panel">
+                <div class="realtors-search-container no-padding-sm">
+                    <div class="padding-top-double padding-right-double padding-bottom padding-left-double">
+                        <div>
+                        <h1 class="title--h2 text--bold">
+                            3 professionnels les plus dynamiques pour votre recherche
+                        </h1>
+                        <div class="realtor-dropdown">
+                            <p class="comfort-reading-width margin-top no-margin-bottom">      
+                                <span class="text--bold">Classement par nombre de ventes au cours des 24 derniers mois.</span>
+                            </p>
+                        </div> 
+                    </div>
+                </div>
+
+                <div *ngFor="let item of AllAgence" class="realtor-list-container">        
+
+                    <div class="realtor-list-item realtor-list-item--contact realtor-list-item--large"> 
+                        <div class="flex full-width">         
+                            <span class="realtor-list-item__logo realtor-list-item__logo--contact">
+                                <svg style="color: #1e91ff; width: 5rem;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="store-alt" class="svg-inline--fa fa-store-alt fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                    <path fill="currentColor" d="M320 384H128V224H64v256c0 17.7 14.3 32 32 32h256c17.7 0 32-14.3 32-32V224h-64v160zm314.6-241.8l-85.3-128c-6-8.9-16-14.2-26.7-14.2H117.4c-10.7 0-20.7 5.3-26.6 14.2l-85.3 128c-14.2 21.3 1 49.8 26.6 49.8H608c25.5 0 40.7-28.5 26.6-49.8zM512 496c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V224h-64v272z"/>
+                                </svg>
+                            </span>    
+
+                            <div class="realtor-list-item__info realtor-list-item__info--contact">
+                                <div class="flex flex-column-sm">
+                                    <div class="realtor-list-item__title">
+                                        <span id="" title="MA VILLA IMMOBILIÈRE" class="realtor-list-item__title-name">
+                                            {{item.nomAgence}}, <p style="margin-left: 4.5rem;" class="realtor-list-item__title-name">{{item.ville}}</p>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="list-specifications">
+                                    <li class="list-specification list-specification--red">Agence immobilière</li>
+                                </div>
+                            </div>
+
+                            <div class="realtor-list-item__kpis--desktop realtor-list-item__kpis--large">
+                                <span class="kpi kpi--realtor">
+                                    <span class="kpi__value kpi__value--realtor">{{item.nbSatisfaction}}</span>
+                                    <span class="kpi__text">Avis positives</span>
+                                </span>
+
+                                <span class="kpi kpi--realtor">
+                                    <span class="kpi__value kpi__value--realtor">{{item.nbVente}}</span>
+                                    <span class="kpi__text">Ventes Récentes</span>
+                                </span>
+                            </div>
+                            
+                            <span class="agence-container">
+                                <input type="checkbox" class="ch">
+                                <span class="checkmark"></span>
+                                <div class="realtor-list-contact">
+
+                                    <div class="realtor-list-contact__profile">
+                                        <div>
+                                            <div class="realtor-list-contact__intro flex flex-justify-center">
+                                                <div class="realtor-list-contact__info">
+                                                    <p class="text--bold" >{{item.nomDirecteur}}</p>      
+                                                    <span>Directeur d'agence</span>      
+                                                </div>
+                                            </div>
+                                            
+                                            <p class="realtor-list-contact__tagline">
+                                                «&nbsp; {{item.description}}&nbsp;»
+                                            </p>
+                                        </div>
+                        
+                                        <div class="text--center">
+                                            <a href={{item.contact}} target="_blank" class="btn btn--primary full-width">
+                                                Contacter {{item.nomDirecteur}}    
+                                            </a>
+                                            <a class="arrow-link margin-top" href={{item.contact}} target="_blank">En savoir plus</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>     
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,22 @@
+@media(max-width: 992px) {
+    .footer {
+        .container {
+            .row {
+                .date {
+                    margin-bottom: 2rem;
+                    .copyright {
+                        font-size: 1.15rem;
+                    }
+                }
+                .list {
+                    ul {
+                        flex-direction: column;
+                        a {
+                            font-size: 1.15rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

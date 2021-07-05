@@ -1,0 +1,298 @@
+/*-----CssHeader-----*/
+.landing-hero--realtors-all {
+    background-color: #efeeec;
+    background-image: url(/assets/img/pexels-the-coach-space-2977581.jpg);
+    background-position: 50%;
+}
+.landing-hero--realtors-all::before {
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+.landing-hero--realtors-all> * {
+    z-index: 1;
+}
+.landing-hero--realtors {
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 1.0666666667rem;
+    position: relative;
+}
+.landing-hero {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 35.2rem;
+    justify-content: center;
+    text-align: center;
+}
+.landing-hero__title--shadowed {
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.8666666667rem;
+    font-weight: 500;
+    line-height: 2.6666666667rem;
+    color: #fff;
+    max-width: 54.2rem;
+    padding: 0 1.0666666667rem 2.6666666667rem;
+    margin: 0 auto;
+    text-shadow: 0 2px 2px rgba(0,0,0,.2);
+}
+.landing-hero__title {
+    padding: 2.6666666667rem 0 0 0;
+}
+.realtors-search-form {
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: none;
+}
+.realtors-search-form__field {
+    margin-bottom: 0;
+    text-align: left;
+    width: 20rem;
+    max-width: 100%;
+}
+.field--vertical {
+    align-items: stretch;
+    flex-direction: column;
+}
+.field {
+    display: flex;
+}
+.field--vertical .field__label {
+    flex: inherit;
+    line-height: 1.4rem;
+    padding: 0 0 .2666666667rem;
+}
+.field__label {
+    font-size: .9333333333rem;
+}
+
+.twitter-typeahead {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    direction: ltr;
+}
+
+.field__control {
+    -webkit-appearance: none;
+    border: 1px solid #e2e2e2;
+    border-radius: .2rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 15px;
+    height: 2.8rem;
+    outline: none;
+    padding: .6666666667rem;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-color: transparent;
+    box-shadow: none;
+    opacity: 1;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+}
+input {
+    overflow: visible;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.realtors-search-form__submit {
+    align-self: flex-end;
+    margin-left: 1.0666666667rem;
+    margin-top: 4.987rem;
+}
+.btn--primary {
+    background-color: #1432be;
+    border-color: #1432be;
+    color: #fff;
+}
+.btn--small {
+    font-size: .8666666667rem;
+    font-weight: 600;
+    line-height: 1rem;
+    padding: .8rem;
+}
+.btn {
+    border: 1px solid transparent;
+    border-radius: .2rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    min-width: 9.6666666667rem;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+}
+button {
+    -webkit-appearance: button;
+    overflow: visible;
+    margin: 0;
+}
+
+/*-----CssSection1-----*/
+.landing-content--incentives {
+    background-color: #fff;
+    padding: 0 1.0666666667rem;
+}
+.landing-content__container--incentives {
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 51.2rem;
+    padding: 3.2rem 0;
+    display: flex;
+}
+.landing-content__container {
+    margin: 0 auto;
+    text-align: center;
+}
+.landing-incentive:not(:last-child) {
+    padding-right: 1.0666666667rem;
+}
+.landing-incentive {
+    flex: 1 1 auto;
+}
+.landing-incentive__img {
+    display: block;
+    height: 6.4rem;
+    margin: 0 auto;
+    min-width: 6.4rem;
+    padding: .5333333333rem;
+    width: auto;
+}
+img {
+    max-width: 100%;
+    border-style: none;
+}
+.landing-incentive__text {
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    margin: 0;
+    max-width: 16rem;
+}
+
+/*-----CssSection2-----*/
+.landing-content--realtors {
+    padding: 0 1.0666666667rem 4.2666666667rem;
+}
+.landing-content--secondary {
+    background-color: #f2f3f4;
+}
+.landing-content__slogan--realtors {
+    margin: 0 auto;
+    max-width: 41.0666666667rem;
+    padding: 5.3333333333rem 0;
+    text-align: center;
+}
+.landing-content__slogan {
+    box-sizing: border-box;
+}
+.title--h1 {
+    color: #3a3a3a;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.8666666667rem;
+    font-weight: 500;
+    line-height: 2.1333333333rem;
+}
+.landing-content__container--steps {
+    align-items: center;
+    max-width: 75.7333333333rem;
+    padding: 0;
+    display: flex;
+}
+.landing-content__container {
+    margin: 0 auto;
+    text-align: center;
+}
+.landing-content__container--steps .landing-content__img:not(:last-child) {
+    padding-right: 1.0666666667rem;
+}
+.landing-content__img--steps {
+    max-width: 30.6rem;
+    width: 100%;
+}
+.landing-content__img {
+    min-height: 0;
+    min-width: 0;
+}
+picture {
+    display: inline-block;
+}
+picture > img {
+    vertical-align: middle;
+}
+
+.landing-incentives-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.landing-incentive--small {
+    max-width: 12rem;
+    width: 100%;
+}
+
+/*--------CssSection3--------*/
+.landing-content--directory {
+    background-color: #fff;
+    padding: 0 1.0666666667rem 4.2666666667rem;
+}
+.directory--landing {
+    max-width: 72.9333333333rem;
+    padding: 1.6rem 2rem 0;
+}
+.directory {
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+}
+.directory__title {
+    margin: 2.6666666667rem 0 1.0666666667rem;
+}
+.padding-bottom-double {
+    padding-bottom: 1.0666666667rem;
+}
+.padding-top-double {
+    padding-top: 1.0666666667rem;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex {
+    display: flex;
+}
+ul.list-link--directory {
+    box-sizing: border-box;
+    flex: 1;
+    margin-bottom: 0;
+}
+ul.list-link {
+    list-style: none;
+    margin-top: 0;
+}
+ul {
+    padding-left: 0;
+}
+ul.list-link--directory li:not(:last-child) {
+    margin-bottom: 1.0666666667rem;
+}
+ul.list-link li {
+    font-size: 15px;
+}
+a {
+    color: #1e91ff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+
+

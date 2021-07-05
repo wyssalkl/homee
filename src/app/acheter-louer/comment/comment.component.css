@@ -1,0 +1,249 @@
+.commentPage {
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3A3A3A;
+}
+* {
+    letter-spacing: inherit;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+div {
+    display: block;
+}
+article {
+    display: block;
+}
+.howto-hero--sale-success {
+    background-image: url(src/assets/img/comment1.webp);
+    background-position: 50%;
+}
+.howto-hero, .howto-hero--sale-success {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.howto-hero {
+    align-items: center;
+    display: flex;
+    height: 14.6666666667rem;
+    justify-content: center;
+    padding: 0 1.0666666667rem;
+}
+.howto-hero__title {
+    color: #fff;
+    margin: 1.0666666667rem 0 2.1333333333rem;
+}
+
+.text--h1 {
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.8666666667rem;
+    font-weight: 500;
+    line-height: 2.1333333333rem;
+}
+:-webkit-any(article,aside,nav,section) h1 {
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+h1 {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+section {
+    display: block;
+}
+.howto-catchphrase {
+    margin: auto;
+    max-width: 61.5333333333rem;
+    padding: 2.1333333333rem 1.0666666667rem;
+    color: #3a3a3a;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 15px;
+}
+.grey-section, .past-sales-report-result {
+    background-color: #f2f3f4;
+}
+
+.howto-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 76.6666666667rem;
+    padding: 2.1333333333rem 1.0666666667rem;
+}
+h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.title--h1, .title--h2 {
+    margin-bottom: 1.0666666667rem;
+}
+
+.title--h1, .title--h2, .title--h3, .title--h4, .title--h5 {
+    margin-top: 0;
+}
+.text--h2, .title--h2 {
+    color: #3a3a3a;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 2rem;
+}
+.howto-article {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 2.1333333333rem 0;
+}
+a:-webkit-any-link {
+    cursor: pointer;
+}
+.howto-article__img-container--left {
+    margin-right: 3.7333333333rem;
+}
+
+.howto-article__img-container {
+    flex-shrink: 0;
+}
+a {
+    color: #1e91ff;
+    text-decoration: none;
+    background-color: transparent;
+}
+h3 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.title--h3, .title--h4, .title--h5 {
+    margin-bottom: .5333333333rem;
+}
+.title--h1, .title--h2, .title--h3, .title--h4, .title--h5 {
+    margin-top: 0;
+}
+.text--h3, .title--h3 {
+    color: #3a3a3a;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.3333333333rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+.arrow-link {
+    display: inline-block;
+    padding-right: 1.6rem;
+    position: relative;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 15px;
+}
+.howto-article.reverse {
+    flex-direction: row-reverse;
+}
+.howto-article__img-container--right {
+    margin-left: 3.7333333333rem;
+}
+.title--h3, .title--h4, .title--h5 {
+    margin-bottom: .5333333333rem;
+}
+
+.title--h1, .title--h2, .title--h3, .title--h4, .title--h5 {
+    margin-top: 0;
+}
+.text--h3, .title--h3 {
+    color: #3a3a3a;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+a :not(.pointer-event) {
+    pointer-events: none;
+}
+
+picture {
+    display: inline-block;
+    vertical-align: middle;
+}
+a :not(.pointer-event) {
+    pointer-events: none;
+}
+.howto-article__img {
+    border-radius: 4px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.2);
+    display: block;
+    max-width: 19.3333333333rem;
+}
+picture>img {
+    vertical-align: middle;
+}
+img {
+    border-style: none;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    font-size: 15px;
+
+}
+ol, ul {
+    list-style-position: inside;
+    margin-bottom: .6666666667rem;
+    padding-left: 0;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.howto-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 76.6666666667rem;
+    padding: 2.1333333333rem 1.0666666667rem;
+}
+
+@media (max-width: 992px) {
+    .howto-article {
+        flex-direction: column;
+    }
+    .title--h3 {
+        margin-top: 2rem;
+    }
+    .howto-article.reverse {
+        flex-direction: column;
+    }
+    .howto-article__img-container--right {
+        margin-left: 0;
+    }
+    .howto-article__img-container--left {
+        margin-right: 0;
+    }
+}

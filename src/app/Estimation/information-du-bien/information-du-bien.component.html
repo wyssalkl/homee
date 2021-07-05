@@ -1,0 +1,144 @@
+<div  *ngIf="!submited">
+    <div class="progress-bar">
+        <div class="progress-bar__filled"></div>
+    </div>
+
+    <div class="full-height-viewport">
+        <div class="header__title">Étape 2 : À propos de ce bien</div>
+
+        <form class="estima__wrapper" [formGroup]="myForm">
+
+            <div class="estima__container centered-content">
+                
+                <div class="estima__container-left">
+                    <div class="form-wrapper">
+                        <h2 class="text--h2 step-title">
+                            <span class="">Informations principales du bien</span>
+                        </h2>
+                        
+                        <div>
+                            <div class="row-container row-container--padding-bottom">
+                                <div class="row-container__label">
+                                    <div class="label-container">
+                                        <label class="label" for="area">Surface</label>
+                                    </div>
+                                </div>
+
+                                <div class="row-container__field form-group">
+                                    <div class="field-container">
+                                        <div class="field--postfix field">
+                                            <input class="field__control form-control" id="area" type="text" placeholder="Surface" formControlName="surface">
+                                            <span class="field__postfix">m²</span>
+                                        </div>
+                                        <div *ngIf="surface.touched && surface.invalid">
+                                            <small *ngIf="surface.errors.required" class="text-danger">Surface est requis</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row-container row-container--padding-bottom row-container--padding-top">
+                                <div class="row-container__label">
+                                    <div class="label-container">
+                                        <label class="label" for="room_count">Nombre de pièces&nbsp;</label>
+                                    </div>         
+                                </div>
+                                <div class="row-container__field form-group">
+                                    <div class="field-container">
+                                        <input class="field field--counter form-control" id="room_count" type="number" value="1" formControlName="nbPiece">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row-container row-container--padding-bottom">
+                                <div class="row-container__label">
+                                    <div class="label-container">
+                                        <label class="label" for="bathroom_count">Nombre de salles de bain&nbsp;</label>
+                                    </div>
+                                </div>
+                                <div class="row-container__field form-group">
+                                    <div class="field-container">
+                                        <input class="field field--counter form-control" id="room_count" type="number" value="1" formControlName="nbSalleDeBian">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="row-container row-container--padding-bottom row-container--padding-top">
+                                    <div class="row-container__label">
+                                        <div class="label-container">
+                                            <label class="label" for="floor">Étage de ce bien</label>
+                                        </div>
+                                    </div>
+                                    <div class="row-container__field form-group">
+                                        <div class="field-container">
+                                            <input class="field field--counter form-control" id="room_count" type="number" value="1" formControlName="etageBien">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Image-->
+                                <div class="row-container row-container--padding-bottom">
+                                    <div class="row-container__label">
+                                        <div class="label-container">
+                                            <label class="label" for="floor_count">Ajouter des photos</label>
+                                        </div>
+                                    </div>
+        
+                                    <div class="row-container__field form-group">
+                                        <div class="field-container">
+                                            <div id="ajouter" class="ajouter-photos">
+                                                <div class="ajouter-photos-container">
+                                                    <div class="ajouter-container">
+                                                        <div class="ajouter photos" ></div>
+                                                        <input (click)="fileInput.click()" class="rechercher photos form-control" style="width: 6rem;" type="file" (change)="onFileChanged($event)" #fileInput multiple>   
+                                                    </div>            
+                                                </div>             
+                                            </div>
+                                        </div>
+                                    </div>      
+                                </div>
+
+                                <div class="row-container row-container--padding-top row-container--padding-bottom">
+                                    <div class="row-container__label">
+                                        <div class="label-container">
+                                            <label class="label" for="ground_garden">Rez-de-jardin</label>
+                                        </div>
+                                    </div>
+                                    <div class="row-container__field form-group">
+                                        <div class="field-container">
+                                            <div class="field">
+                                                <select class="field__control field__control--select" id="ground_garden" formControlName="jardin">
+                                                    <option data-empty-value="true" value="">-- Choisir --</option>
+                                                    <option value="Non">Non</option>
+                                                    <option value="Oui, privé">Oui, privé</option>
+                                                    <option value="Oui, publique">Oui, publique</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="bottom-navigation">
+            <div class="centered-content flex full-height">
+                <div class="bottom-navigation__buttons">
+                    <button [routerLink]="['/aproposDuBien']" type="button" class="btn btn--secondary btn--previous">
+                        <span class="icon icon-arrow_downward margin-right-half"></span>
+                        Retour
+                    </button>
+
+                    <div class="form-group">
+                        <button (click)="goEnchirirBien()" [disabled]="myForm.invalid" type="button" class="btn btn--primary">Suivant</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-enchere-du-bien [annonce]="form" *ngIf="submited"></app-enchere-du-bien>

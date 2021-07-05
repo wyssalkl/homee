@@ -1,0 +1,150 @@
+<div class="full-height-viewport" >
+
+    <div class="header__title">Étape 1 : Adresse du bien</div>
+    <div class="progress-bar">
+        <div class="progress-bar__filled" style="width: 10%;"></div>
+    </div>
+
+    <form class="estima__wrapper" [formGroup]="myForm">
+        <div class="estima__container centered-content">
+            <div class="estima__container-left">
+                
+                <div class="form-wrapper">
+                    <h2 class="text--h2 step-title">
+                        <span>Renseignez l’adresse à estimer</span>
+                    </h2>
+                    <div>
+                        <div class="row-container-group">
+                            <div class="row-container--vertical row-container-group__item"></div>
+                        </div>
+
+                        <div class="row-container-group">
+                            <div class="row-container row-container--vertical row-container--padding-bottom row-container-group__item">
+                                <div class="row-container__label">
+                                    <div class="label-container">
+                                        <label class="label" for="codePostal">Code postal</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="field-container">
+                                        <div class="field">
+                                            <input class="field__control form-control" name="codePostal" id="codePostal" type="tel" placeholder="8056" formControlName="codePostal">
+                                        </div>
+                                        <div *ngIf="codePostal.touched && codePostal.invalid">
+                                            <small *ngIf="codePostal.errors.required" class="text-danger"> Code postal est requis </small><br>
+                                            <small *ngIf="codePostal.errors.pattern" class="text-danger"> Code postal est invalide</small>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+
+                            <div class="row-container row-container--vertical row-container--padding-bottom row-container-group__item">
+                                <div class="row-container__label">
+                                    <div class="label-container">
+                                        <label class="label" for="adresse">Titre</label>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group">
+                                    <div class="field-container">
+                                        <div class="field">
+                                        <input class="field__control form-control" id="titre" type="text" placeholder="Titre de votre annonce" value="" formControlName="titre"></div>
+                                        </div>
+                                        <div *ngIf="titre.touched && titre.invalid">
+                                            <small *ngIf="titre.errors.required" class="text-danger"> Titre est requis </small><br>
+                                            <small *ngIf="titre.errors.pattern" class="text-danger"> Titre est invalide</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-container-group">
+                            <div class="row-container row-container--vertical row-container--padding-bottom row-container-group__item">
+                                <div class="row-container__label">
+                                    <div class="label-container">
+                                        <label class="label" for="ville">Ville</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="field-container">
+                                        <div class="field">
+                                            <select class="field__control field__control--select" id="ville" formControlName="ville">
+                                                <option data-empty-value="true" value="">-- Choisir --</option>
+                                                <option value="Ariana">Ariana</option>
+                                                <option value="Béja">Béja</option>
+                                                <option value="Ben Arous">Ben Arous</option>
+                                                <option value="Bizerte">Bizerte</option>
+                                                <option value="Gabes">Gabes</option>
+                                                <option value="Gafsa">Gafsa</option>
+                                                <option value="Jendouba">Jendouba</option>
+                                                <option value="Kairouan">Kairouan</option>
+                                                <option value="Kasserine">Kasserine</option>
+                                                <option value="Kebili">Kebili</option>
+                                                <option value="La Manouba">La Manouba</option>
+                                                <option value="Le Kef">Le Kef</option>
+                                                <option value="Mahdia">Mahdia</option>
+                                                <option value="Médenine">Médenine</option>
+                                                <option value="Monastir">Monastir</option>
+                                                <option value=" Nabeul">Nabeul</option>
+                                                <option value="Sfax">Sfax</option>
+                                                <option value="Sidi Bouzid">Sidi Bouzid</option>
+                                                <option value="Siliana">Siliana</option>
+                                                <option value="Sousse">Sousse</option>
+                                                <option value="Tataouine">Tataouine</option>
+                                                <option value="Tozeur">Tozeur</option>
+                                                <option value="Tunis">Tunis</option>
+                                                <option value="Zaghouan">Zaghouan</option>      
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngIf="ville.touched && ville.invalid">
+                                    <small *ngIf="ville.errors.required" class="text-danger"> Ville est requis </small><br>
+                                </div>
+                            </div>
+
+                            <div class="row-container row-container--vertical row-container-group__item">
+                                <div class="row-container__label">
+                                    <div class="label-container">
+                                        <label class="label" for="Bien">Bien à vendre/ à louer</label>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group">
+                                    <div class="field-container">
+                                        <div class="field">
+                                            <select class="field__control field__control--select" id="categorie" formControlName="categorie">
+                                                <option data-empty-value="true" value="">-- Choisir --</option>
+                                                <option value="Vente">Vente</option>
+                                                <option value="Location">Location</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngIf="categorie.touched && categorie.invalid">
+                                    <small *ngIf="categorie.errors.required" class="text-danger"> Catégorie est requis </small><br>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!--
+                        <div class="row-container-group">
+                            <div class="row-container--vertical row-container-group__item">
+                                <button  [disabled]="myForm.invalid" type="button" class="btn btn--primary flex-row">Suivant</button>
+                            </div>
+                        </div>-->
+
+                        <div class="row-container-group">
+                            <div class="row-container--vertical row-container-group__item">
+                                <button (click)="goAproposDuBien()" [disabled]="myForm.invalid" type="button" class="btn btn--primary flex-row">Suivant</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div> 
+    </form>
+</div>

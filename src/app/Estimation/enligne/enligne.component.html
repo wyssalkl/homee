@@ -1,0 +1,91 @@
+<!-- Section1 -->
+<section class="landing-hero">
+    <div class="landing-hero__container">
+        <h1 class="landing-hero__title landing-hero__title--only landing-hero__title--shadowed">Dépôt immobilier en ligne gratuit</h1>
+        
+        <form for="adresseDuBien" [formGroup]="myForm">
+            <div class="search-bar search-bar--landing">
+                <span class="algolia-places form-group">
+                    <input class="form-control search-bar__input search-bar__input--landing ap-input"  id="adresseDuBien" name="adresseDuBien" type="text" placeholder="1 Rue Marsa" formControlName="adresseDuBien"> 
+                    <button type="button" aria-label="focus" class="ap-input-icon ap-icon-pin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 20">
+                            <path d="M7 0C3.13 0 0 3.13 0 7c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5C5.62 9.5 4.5 8.38 4.5 7S5.62 4.5 7 4.5 9.5 5.62 9.5 7 8.38 9.5 7 9.5z"></path>
+                        </svg>
+                    </button>     
+                </span>
+                <div class="form-group">
+                    <button (click)="goAdresseDuBien()" [disabled]="myForm.invalid" type="button" class="btn btn--primary search-bar__cta search-bar__cta--landing">Déposer</button>
+                </div>
+            </div>
+            <div *ngIf="adresseDuBien.touched && adresseDuBien.invalid" style="margin-right: 25rem;">
+                <b *ngIf="adresseDuBien.errors.required" class="text-danger"> L'adresse du bien est requis </b><br>
+                <b *ngIf="adresseDuBien.errors.pattern" class="text-danger"> L'adresse du bien est invalide</b>
+            </div> 
+        </form>
+        
+    </div>
+</section>
+
+<!-- Section2 -->
+<section class="estima-landing-section estima-landing-section--que-choisir">
+    <div class="estima-landing-section__content">
+        <div class="estima-landing-que-choisir">
+            <p class="estima-landing-que-choisir__title-wrapper">
+                <q class="estima-landing-que-choisir__title">&nbsp;Le plus convaincant des simulateurs en ligne&nbsp;</q>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Section3 -->
+<section class="estima-landing-section estima-landing-section--blue">
+    <div class="estima-landing-section__content estima-landing-methodology">
+        <h2 class="title--h3 estima-landing-methodology__title">Comment déposer un bien immobilier ?</h2>
+        <p class="paragraph text--bold">vous allez mettre votre bien immobilier, il faut :</p>
+        <ul class="check-list">
+            <li class="check-list__item check-list__item--white">Mettez un maximum d’informations dans votre annonce</li>
+            <li class="check-list__item check-list__item--white">Précisez l’emplacement de votre bien immobilier</li>
+            <li class="check-list__item check-list__item--white">Fixez un prix de vente juste et réaliste pour votre logement</li>
+            <li class="check-list__item check-list__item--white">Belles photos = 7 fois plus de visites sur votre annonce immobilière</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Section4 -->
+
+<section class="estima-landing-section container">
+
+    <div class="estima-landing-section__content estima-landing-section__content--splitted row">
+        <div class="margin-bottom-triple col-lg-6 col-12">
+            <h2 class="title--h4 no-margin-top DS--underline">Mettez un maximum d’informations dans votre annonce</h2>
+            <p class="paragraph">
+                Vous allez devoir rédiger un texte exhaustif qui permettra à chaque personne intéressée de récolter un maximum d’informations au sujet de votre logement. N’hésitez donc pas dans un premier temps à lister sur une feuille toutes les informations qui décrivent votre bien immobilier, puis décrivez ces éléments au maximum dans un texte qui sera bien écrit, sans faute, avec des tournures de phrases avantageuses. N’oubliez pas que ce texte sera votre façade.
+            </p>
+        </div>
+        <div class="margin-bottom-triple col-lg-6 col-12">
+            <h2 class="title--h4 no-margin-top DS--underline">Précisez l’emplacement de votre bien immobilier</h2>
+            <p class="paragraph">
+                Les personnes qui sont en recherche d’un logement privilégient en général dans un premier temps les annonces pour lesquelles les informations sont les plus nombreuses, et en particulier en ce qui concerne l’emplacement. Les acheteurs apprécient de savoir d’ores et déjà dans quel quartier se situe le logement qu’ils vont visiter, pour se renseigner en amont et se projeter, ce qui permet d’éviter une éventuelle déception le jour de la visite. Si vous ne souhaitez pas donner l’adresse exacte de votre logement, ne vous obligez pas à le faire, mais prenez au moins la peine de citer le quartier, éventuellement la rue sans donner le numéro, et décrivez l’environnement dans l’annonce.
+            </p>
+        </div>
+    </div>
+
+    <div class="estima-landing-section__content estima-landing-section__content--splitted row">
+        <div class="margin-bottom-triple col-lg-6 col-12">
+            <h2 class="title--h4 DS--underline">Fixez un prix de vente juste et réaliste pour votre logement</h2>
+            <p class="paragraph">
+                Fixer le prix d’un logement n’est pas un paramètre qui s’improvise, il s’agit d’un vrai métier qui nécessite de solides connaissances du marché immobilier. Vous pouvez commencer par vous faire une idée de la valeur de votre logement en utilisant un outil d’estimation en ligne fiable. Mais dans un deuxième temps, il est essentiel de faire appel à un professionnel pour obtenir une évaluation plus précise et qui prend en compte les réalités du marché dans votre commune, le rapport entre l’offre et la demande, les projets urbains prévus, etc. Une fois que cette estimation sera faite, vous connaîtrez précisément les atouts et les faiblesses de votre logement ainsi que le prix juste et réaliste auquel vous pourrez vendre votre bien. Pensez bien à le préciser dans l’annonce.
+            </p>
+        </div>
+        <div class="margin-bottom-triple col-lg-6 col-12">
+            <h2 class="title--h4 DS--underline">Belles photos = 7 fois plus de visites sur votre annonce immobilière</h2>
+            <p class="paragraph">
+                Bien entendu, les photos qui apparaîtront dans votre annonce ont une importance capitale, elles peuvent à elles seules convaincre les acheteurs de visiter votre logement. Il est donc impératif de suivre ces quelques conseils au moment de prendre vos photos :
+            </p>
+            <p class="paragraph">Rangez chaque pièce de fond en comble, évitez absolument de laisser des affaires sur le sol ou sur les meubles. Bien évidemment, évitez également qu’un membre de la famille ou un animal apparaisse sur la photo.</p>
+            <p class="paragraph">Retirez un maximum d’objets trop personnels : photos, bibelots, jouets, etc. Les acheteurs commencent déjà à se projeter (ou non) en regardant vos photos, faites donc en sorte qu’ils puissent s’imaginer dans un endroit le plus neutre possible.</p>
+            <p class="paragraph">Attendez les heures les plus lumineuses dans chaque pièce pour prendre les photos, et réglez correctement les options de l’appareil. Les pièces doivent paraître claires, voire surexposées pour les plus petites d’entre elles.</p>
+            <p class="paragraph">N’oubliez pas de prendre des photos des espaces extérieurs également, en adoptant les mêmes règles : ranger et attendre un temps et une luminosité optimales.</p>
+        </div>
+    </div>
+</section>

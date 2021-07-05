@@ -1,0 +1,115 @@
+<div id="content-id" class="page-container">
+    <aside class="side-container">
+        <ul class="list side-container__menu">
+            <li class="list-item">
+                <a [routerLink]="['/espaceConnecté']" class="link link--no-underline list-item__content list-item__content--button">
+                    <div class="list-item-text">
+                        <span class="list-item-text__primary">Tableau de bord</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="list-item list-item--active">
+                <a [routerLink]="['/Profil']" class="link link--no-underline list-item__content list-item__content--button">
+                    <div class="list-item-text">
+                        <span class="list-item-text__primary">Profil</span>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+    </aside>
+
+
+    <div class="content-wrapper">
+
+        <div href="#espaceConnecté" class="full-width hide">
+            <div class="content-header">
+                <h1 class="title title--h1">Bonjour Ghada</h1>
+            </div>
+
+            <section class="dashboard-section">
+                <div class="dashboard-section__header">
+                    <h2 class="title title--h2 dashboard-section__title">Projet de vente/location</h2>
+                    
+                    <a class="button button--primary button--large button--outlined habitations-section__link"  href="#">
+                        <span [routerLink]="['/enligne']" class="button__content">
+                            <span class="button__icon button__icon--start-icon">
+                                <svg class="svg-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12.75 21a.75.75 0 00.75-.75V13.5h6.75a.75.75 0 00.75-.75v-1.5a.75.75 0 00-.75-.75H13.5V3.75a.75.75 0 00-.75-.75h-1.5a.75.75 0 00-.75.75v6.75H3.75a.75.75 0 00-.75.75v1.5c0 .414.336.75.75.75h6.75v6.75c0 .414.336.75.75.75h1.5z"></path>
+                                </svg>
+                            </span>
+                            Déposer un nouveau bien
+                        </span>
+                    </a>
+                </div>
+                <div class="habitation-card-list">
+                    <div class="card card--elevation-1 habitation-card" data-testid="habitation-card">
+                        
+                    </div> 
+                </div>
+            </section>
+        </div>
+
+        <div href="#Profil" class="full-width">
+            <section class="dashboard-section">
+                <div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right" style="color:#0074e4">Mon Profil</h4>
+                    </div>
+
+                    <form [formGroup]="myForm" (ngSubmit)="updateProprietaire()">
+                        <div class="row mt-2">
+                            <div class="form-group col-md-12">
+                                <label class="labels">Nom</label>
+                                <input type="text" class="form-control" placeholder="Nom" formControlName="Nom">
+                                <div *ngIf="Nom.touched && Nom.invalid">
+                                    <small *ngIf="Nom.errors.required" class="text-danger"> Nom est requis </small><br>
+                                    <small *ngIf="Nom.errors.pattern" class="text-danger"> Nom est invalide</small><br>
+                                    <small *ngIf="Nom.errors.minlength" class="text-danger"> Le nom doit contenir au moins 4 caractères</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-12">
+                                <label class="labels">Numéro de téléphone</label>
+                                <input type="text" class="form-control" placeholder="entrer ton numéro de téléphone" formControlName="NumeroDeTelephone">
+                                <div *ngIf="NumeroDeTelephone.touched && NumeroDeTelephone.invalid">
+                                    <small *ngIf="NumeroDeTelephone.errors.required" class="text-danger"> Numéro de téléphone est requis </small><br>
+                                    <small *ngIf="NumeroDeTelephone.errors.pattern" class="text-danger"> Numéro de téléphone est invalide</small><br>
+                                    <small *ngIf="NumeroDeTelephone.errors.minlength" class="text-danger"> Le numéro de téléphone doit contenir au moins 8 caractères</small><br>
+                                    <small *ngIf="NumeroDeTelephone.errors.maxlength" class="text-danger"> Le numéro de téléphone doit contenir au plus 13 caractères</small>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <label class="labels">Email</label>
+                                <input type="text" class="form-control" placeholder="entrer ton email" formControlName="Email">
+                                <div *ngIf="Email.touched && Email.invalid">
+                                    <small *ngIf="Email.errors.required" class="text-danger"> Email est requis </small><br>
+                                    <small *ngIf="Email.errors.pattern" class="text-danger"> Email est invalide </small>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <label class="labels">Mot de passe</label>
+                                <input type="password" class="form-control" placeholder="entrer ton mot de passe" formControlName="Password">
+                                <div *ngIf="Password.touched && Password.invalid">
+                                    <small *ngIf="Password.errors.minlength" class="text-danger"> Password doit contenir au moin 4 caractére</small>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-group mt-5 text-center">
+                            <button class="btn btn-primary profile-button" [disabled]="myForm.invalid" type="submit">Enregistrer mes informations</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+

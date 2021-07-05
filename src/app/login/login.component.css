@@ -1,0 +1,26 @@
+.progress-bar {
+    background: #e2e2e2;
+    height: .5333333333rem;
+    position: relative;
+    top: .1rem;
+    width: 100%;
+    z-index: 10;
+}
+.progress-bar__filled {
+    background: linear-gradient(270deg,#7bb9f3,#0074e4);
+    height: 8px;
+    transition: width .3s ease-out;
+    width: 100%;
+}
+.progress-bar__filled {
+    background: linear-gradient(270deg,#7bb9f3,#0074e4);
+    height: 8px;
+    transition: width .3s ease-out;
+    width: 100%;
+}
+main {
+    margin-top: .4rem;
+}
+.card-header ,.card-body {
+    background: linear-gradient(270deg,#7bb9f3,#0074e4);
+}

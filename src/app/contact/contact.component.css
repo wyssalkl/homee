@@ -1,0 +1,117 @@
+.landing-hero--contact {
+    background-image: url("/assets/img/pexels-buro-millennial-1438084.jpg");
+    background-position: 50%;
+}
+.landing-hero--darken {
+    position: relative;
+}
+.landing-hero {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 39.2rem;
+    justify-content: center;
+    text-align: center;
+}
+.landing-hero--darken:before {
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+.landing-hero__title {
+    font-size: 2rem;
+    padding-bottom: .2666666667rem;
+    color: #fff;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-weight: 500;
+    line-height: 2.1333333333rem;
+    margin: 0;
+}
+.landing-hero--darken>* {
+    z-index: 1;
+}
+h1 {
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+   
+}
+
+.section {
+    padding: 4.2666666667rem 0;
+    width: auto;
+    display: block;
+}
+@media (min-width: 64em){
+.section__content--center {
+    padding-right: 0;}
+.section__content--6col {
+    max-width: 37.2rem;}
+}
+.section__content {
+    margin: 0 auto;
+    
+}
+img {
+    max-width: 100%;
+    border-style: none;
+}
+.title--h3, .title--h4, .title--h5 {
+    margin-bottom: .5333333333rem;
+    margin-top: 0;
+}
+.text--h3, .title--h3 {
+    color: #3a3a3a;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.contact-comm__text {
+    font-size: 15px;
+}
+
+.contact-comm__details {
+    flex: 1 1 auto;
+}
+.contact-comm__cta {
+    margin-top: .5333333333rem;
+}
+.contact-comm:first-child {
+    padding-top: 0;
+}
+.contact-comm {
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    padding: 3.2rem 0;
+}
+.contact-comm__icon {
+    color: #1e91ff;
+    margin-right: 1.6rem;
+    width: 4.8666666667rem;
+}
+a {
+    color: #1e91ff;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+.full {
+    width: 100%;
+    height: 550px;
+}

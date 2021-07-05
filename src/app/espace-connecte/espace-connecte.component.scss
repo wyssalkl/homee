@@ -1,0 +1,192 @@
+.page-container{
+    font-family: "WorkSans",-apple-system,blinkmacsystemfont,"Segoe UI",roboto,oxygen,ubuntu,cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    display: flex;
+    max-width: 100%;
+    padding: 1.5rem 3rem;
+    .side-container{
+        width: 25%;
+        height: auto;
+        margin-right: 5%;
+        .list{
+            list-style-type: none;
+            padding: 0;
+            box-shadow: 0 1px 4px 0 #0074e4;
+            border-radius: .5rem;
+            padding: .5rem 0;
+            .list-item {
+                color: #0074e4;
+                font-weight: 500;
+                .list-item-text{
+                    padding: 0.75rem 1rem;
+                }
+                .link{
+                    color: #0074e4;
+                }
+            }
+            .list-item--active {
+                position: relative;
+                color: #0074e4;
+                .link{
+                    color: #0074e4;
+                }
+                &:before{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 4px;
+                    height: 100%;
+                    background: linear-gradient(270deg,#03EFFE,#3CBDFE);
+                    content: "";
+                }
+            }
+        }
+    }
+    .content-wrapper{
+        width: 70%;
+        .full-width{
+            .content-header{
+                .title{
+                    font-weight: bold;
+                    color: #0074e4;
+                    font-size: 1.75rem;
+                }
+            }
+            .dashboard-section{
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-direction: column;
+                .title{
+                    color: black;
+                    font-size: 1.25rem;
+                    align-self: flex-start;
+                }
+                .dashboard-section__header{
+                    .button{
+                        border: 1px solid #0074e4;
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        padding: .5rem .66rem;
+                        color: #0074e4;
+                        font-weight: bold;
+                        margin-bottom: 2rem;
+                        align-self: flex-end;
+                        .button__content{
+                            color: #0074e4;
+                            .button__icon{
+                                svg{
+                                    width: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .dashboard-section__edit{
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-direction: row;
+                    .button{
+                        border: 1px solid #0074e4;
+                        border-radius: 4px;
+                        padding: .5rem .66rem;
+                        color: #0074e4;
+                        font-weight: bold;
+                        margin-bottom: .5rem;
+                        .button__content{
+                            color: #0074e4;
+                        }
+                    }
+                }
+                .habitation-card-list{
+                    align-self: flex-start;
+                    .habitation-card{
+                        box-shadow: 0 1px 6px 1px rgba(0,0,0,.2);
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        overflow: hidden;
+                        padding: 1rem;
+                        border-radius: .5rem;
+                        padding-right: 4rem;
+                        max-width: 100%;
+                        .habitation-card__address{
+                            width: 100%;
+                            text-overflow: ellipsis;
+                            padding-bottom: 1rem;
+                            font-weight: bold;
+                            color: #3a3a3a;
+                            font-size: 1rem;
+                            line-height: 1.5;
+                            letter-spacing: 0;
+                        }
+                        .tags-wrapper {
+                            list-style-type: none;
+                            padding: 0;
+                            display: flex;
+                            width: 100%;
+                            .tag{
+                                border: 1px solid #d8d8d8;
+                                margin: .5rem .5rem 0 0;
+                                padding: calc(.25rem - 1px) calc(1rem - 1px);
+                                display: inline-flex;
+                                max-width: 100%;
+                                color: #3a3a3a;
+                                border-radius: .333rem;
+                                .tag__text{
+                                    max-width: 19rem;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        .habitation-card__price {
+                            margin-bottom: .5rem;
+                            font-weight: bold;
+                            font-size: 1.25rem;
+                        }
+                        .link{
+                            margin-left: -.5rem;
+                            margin-bottom: -.5rem;
+                            padding-left: .4375rem;
+                            padding-right: .4375rem;
+                            margin-top: auto;   
+                            .button__content{
+                                display: flex;
+                                align-items: center;
+                                background: none;
+                                color: #33afc7;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+@media (max-width:992px){
+    .page-container{
+        flex-direction: column;
+        align-items: center;
+        .side-container{
+            width: 90%;
+            margin-right: 0;
+        }
+        .content-wrapper{
+            width: 100%;
+            .dashboard-section__header {
+                margin-right: 16%;
+            }
+            .dashboard-section__edit {
+                margin-right: 27%;
+            }
+            .habitation-card{
+                padding-right: 1rem!important;
+            }
+        }
+    }
+}

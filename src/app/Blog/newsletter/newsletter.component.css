@@ -1,0 +1,100 @@
+.fourthPage {
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+   
+}
+.post-header {
+    height: 469px;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(src/assets/img/newsletter.jpg);
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+div {
+    display: block;
+}
+.container-col {
+
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    margin-bottom: 58px;
+}
+.container {
+    max-width: 1245px;
+    margin: 0 auto;
+    width: 95%;
+}
+section.the_post {
+    padding: 48px 5% 16px;
+    width: 70%;
+    margin-left:15%;
+    margin-top: -157px;
+    background-color: #022954;
+}
+:-webkit-any(article,aside,nav,section) h1 {
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+h1 {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: white;
+   
+}
+
+.title_page {
+    
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+p, h1, h2, h3, h4, ul, a, figcaption, input, textarea {
+    -webkit-font-smoothing: antialiased;
+}
+.content_new p, .content_old p {
+    margin: 25px 0;
+    color: white;
+ 
+}
+
+b, strong {
+    font-weight: 700;
+}
+h4{
+    color: white;
+}
+#Help{
+    font-size: 15px;
+    margin-top: 50px;
+}
+button{
+    background-color: white;
+    color: #022954;
+}
+button:hover{
+    background-color:#022954;
+    color:white;
+    border-color: white;
+}
+
+@media (max-width:992px){
+    .NewsletterContainer .the_post{
+        width: 100%;
+        margin-left: 0;
+    }
+}

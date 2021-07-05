@@ -1,0 +1,273 @@
+/* ------CssSection1-------*/
+.landing-hero {
+    background-image: url(/assets/img/home-hero@2x.webp);
+    background-position: 30%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 39.2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.landing-hero__container {
+    margin: -6.9333333333rem 1.0666666667rem 0;
+}
+.landing-hero__title--only {
+    margin-bottom: 2.6666666667rem;
+    padding-bottom: 0;
+}
+.landing-hero__title--shadowed {
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.8666666667rem;
+    font-weight: 500;
+    line-height: 2.6666666667rem;
+    color: #fff;
+    max-width: 54.2rem;
+    padding: 0 1.0666666667rem 2.6666666667rem;
+    margin: 0 auto;
+    text-shadow: 0 2px 2px rgba(0,0,0,.2);
+}
+input {
+    overflow: visible;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+.search-bar--landing {
+    margin: 0 auto;
+    max-width: 40rem;
+}
+.search-bar {
+    align-content: stretch;
+    align-items: stretch;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.algolia-places {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    direction: ltr;
+}
+.search-bar__input--landing {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    position: relative;
+    vertical-align: top;
+    border: none;
+    font-size: 1rem;
+    height: 3.2rem;
+}
+.search-bar__input {
+    -webkit-appearance: none;
+    border-radius: .2rem;
+    line-height: 1.3333333333rem;
+    padding: 0 1.0666666667rem;
+}
+.ap-input, .ap-hint {
+    width: 100%;
+    outline: none;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+[type="button"],button {
+    -webkit-appearance: button;
+}
+.ap-icon-clear.ap-icon-pin{
+    display: none;
+}
+.ap-input-icon {
+    border: 0;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 16px;
+    outline: none;
+}
+.ap-input-icon svg {
+    fill: #cfcfcf;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+button {
+    text-transform: none;
+    overflow: visible;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+.ap-input-icon.ap-icon-pin {
+    cursor: pointer;
+}
+
+.search-bar__cta--landing {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 3.2rem;
+    margin-left: 0;
+}
+
+.search-bar__cta {
+    flex: 0 1 auto;
+    white-space: nowrap;
+}
+
+.btn--primary {
+    background-color: #1432be;
+    border-color: #1432be;
+    color: #fff;
+}
+.btn {
+    border: 1px solid transparent;
+    border-radius: .2rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3333333333rem;
+    min-width: 9.6666666667rem;
+    padding: .8666666667rem 1.6rem;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+}
+
+/* ------CssSection2-------*/
+
+.estima-landing-section--que-choisir {
+    padding: 9.6rem;
+}
+.estima-landing-section__content {
+    margin: auto;
+    max-width: 75.7333333333rem;
+}
+.estima-landing-que-choisir {
+    align-items: center;
+    color: #1b365d;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.estima-landing-que-choisir__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 19.3333333333rem;
+    order: 1;
+    padding-right: 2rem;
+    text-align: center;
+    margin: 0;
+}
+.estima-landing-que-choisir__title {
+    flex: 0 1 auto;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0;
+    order: 1;
+    padding-bottom: .5333333333rem;
+}
+
+.text--regular {
+    font-weight: 400;
+}
+.text--base, .text--normal {
+    color: #3a3a3a;
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+}
+.text--big {
+    font-size: 1.1333333333rem;
+    line-height: 1.6rem;
+}
+
+/* ------CssSection3-------*/
+.estima-landing-section--blue {
+    background: #1e91ff;
+    color: #fff;
+}
+.estima-landing-section {
+    padding: 3.7333333333rem 4.6rem;
+}
+.estima-landing-section__content {
+    margin: auto;
+    max-width: 75.7333333333rem;
+}
+.estima-landing-methodology__title {
+    color: #fff;
+    margin-bottom: 1.0666666667rem;
+    margin-top: 0;
+}
+.title--h3 {
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-size: 1.3333333333rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+.text--bold {
+    font-family: WorkSans,-apple-system,blinkmacsystemfont,Segoe UI,roboto,oxygen,ubuntu,cantarell,Open Sans,Helvetica Neue,sans-serif;
+    font-weight: 600;
+}
+.paragraph {
+    margin: .5333333333rem 0;
+}
+.check-list {
+    list-style: none;
+}
+ul {
+    margin-bottom: .6666666667rem;
+    padding-left: 0;
+    list-style-position: inside;
+}
+.check-list__item {
+    align-items: flex-start;
+    display: flex;
+    line-height: 1.6rem;
+    margin-bottom: .5333333333rem;
+}
+
+
+/* ------CssSection4-------*/
+
+.estima-landing-section__content--splitted {
+    display: flex;
+}
+
+.estima-landing-section__content--splitted > div {
+    flex: 1 1 50%;
+}
+.margin-bottom-triple {
+    margin-bottom: 1.6rem !important;
+}
+.margin-bottom-triple, .no-margin-top {
+    margin-top: 0 !important;
+}
+.title--h4 {
+    margin-bottom: .5333333333rem;
+}
+.DS--underline {
+    color: #1432be;
+    background-color: transparent;
+}
+.paragraph {
+    margin: .5333333333rem 0;
+}
+
+@media(max-width: 992px) {
+    .paragraph {
+        font-size: .95rem;
+    }
+    .title--h4 {
+        font-size: 1.5rem !important;
+    }
+}
+

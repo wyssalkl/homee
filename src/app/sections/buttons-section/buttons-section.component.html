@@ -1,0 +1,73 @@
+
+<div class="home-search-mask home-search-mask--sage">
+    <h1 class="home-search-mask__title">
+        Déposer et&nbsp;comparez
+        <span class="hide-sm"> en toute confiance</span>
+    </h1>
+
+    <div class="search-mask">
+        <nav class="nav-tabs nav-tabs--left nav-tabs--separated search-mask__tabs">
+            <div class="nav-tabs__content">
+                <a [routerLink]="['/home']" class="nav-tabs__item nav-tabs__item--active ">Déposer un bien</a>
+                <a [routerLink]="['/compare']" class="nav-tabs__item" >Comparer des agences</a>
+            </div>
+        </nav>
+
+        <div>
+            <form class="search-mask__form" [formGroup]="myForm">             
+                <label class="text--small" for="adresseDuBien">Adresse de votre bien</label>
+                <div class="search-bar margin-top-half form-group"> 
+                    <input class="search-bar__input full-width form-control" name="adresseDuBien" id="adresseDuBien" type="text" placeholder="Ex : Avenue Habib Bourguiba, Nabeul‎ 8019, Tunisie" formControlName="adresseDuBien">
+                    <button (click)="goAdresseDuBien()" [disabled]="myForm.invalid" type="button" class="btn btn--primary search-bar__cta">
+                        Déposer
+                    </button>
+                </div>
+                <div *ngIf="adresseDuBien.touched && adresseDuBien.invalid">
+                    <small *ngIf="adresseDuBien.errors.required" class="text-danger"> L'adresse du bien est requis </small><br>
+                    <small *ngIf="adresseDuBien.errors.pattern" class="text-danger"> L'adresse du bien est invalide</small>
+                </div>     
+            </form>
+        </div>
+        
+        <div class="hide">
+           
+        </div> 
+          
+    </div>
+  
+</div> 
+
+<section class="landing-services-white">
+
+    <div class="landing-service landing-service--reverse ">
+
+        <div class="card card-lift--hover border-0">
+        <picture class="landing-service__img-container">
+            <img src="./assets/img/home-estima-new.jpg" class="landing-service__img" alt="">
+        </picture>
+        </div>
+        <div class="landing-service__content">
+            <h2 class="landing-service__title">Déposer en ligne</h2>
+            <p class="landing-service__subtitle">Avec Homee, vous aurez accès à un espace qui s'appel «Déposer un bien» qui vous permettant ainsi de mettre en avant vos annonces</p>
+            <a [routerLink]="['/enligne']" type="button" class="btn btn-outline-primary">Déposer un bien</a>
+        </div>
+
+    </div>
+
+    <div class="landing-service landing-service--reverse">
+
+        <div class="card card-lift--hover border-0">
+        <picture class="landing-service__img-container">
+            <img src="./assets/img/home-comparateur.jpg" class="landing-service__img" alt="">
+        </picture>
+        </div>
+        <div class="landing-service__content">
+            <h2 class="landing-service__title">Comparateur d'agences</h2>
+            <p class="landing-service__subtitle">Nous comparons les agences locales pour vous permettre de choisir les meilleures pour votre projet, selon leurs ventes récentes et leurs avis clients </p>
+            <a [routerLink]="['/paragence']" class="btn btn-outline-primary">Trouver la bonne agence</a>
+        </div>
+        
+    </div>
+</section>
+
+  

@@ -1,0 +1,90 @@
+<div id="content-id" class="page-container">
+    <aside class="side-container">
+        <ul class="list side-container__menu">
+            <li class="list-item ">
+                <a href="#espacePreneur" class="link link--no-underline list-item__content list-item__content--button">
+                    <div class="list-item-text">
+                        <span class="list-item-text__primary">Annonces sauvegardées</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="list-item list-item--active">
+                <a href="#profilPreneur" class="link link--no-underline list-item__content list-item__content--button">
+                    <div class="list-item-text">
+                        <span class="list-item-text__primary">Profil</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="content-wrapper"> 
+        <div href="#espacePreneur" class="full-width hide">
+        </div>
+
+        <div href="#profilPreneur" class="full-width">
+            <section class="dashboard-section">
+                <div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right" style="color:#0074e4">Mon Profil</h4>
+                    </div>
+
+                    <form [formGroup]="myForm" (ngSubmit)="updatePreneur()">
+                        <div class="row mt-3">
+                            <div class="form-group col-md-12">
+                                <label class="labels">Nom</label>
+                                <input type="text" class="form-control" placeholder="Nom" formControlName="Nom">
+                                <div *ngIf="Nom.touched && Nom.invalid">
+                                    <small *ngIf="Nom.errors.required" class="text-danger"> Nom est requis </small><br>
+                                    <small *ngIf="Nom.errors.pattern" class="text-danger"> Nom est invalide</small><br>
+                                    <small *ngIf="Nom.errors.minlength" class="text-danger"> Le nom doit contenir au moins 4 caractères</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="form-group col-md-12">
+                                <label class="labels">Numéro de téléphone</label>
+                                <input type="text" class="form-control" placeholder="entrer ton numéro de téléphone" formControlName="NumeroDeTelephone">
+                                <div *ngIf="NumeroDeTelephone.touched && NumeroDeTelephone.invalid">
+                                    <small *ngIf="NumeroDeTelephone.errors.required" class="text-danger"> Numéro de téléphone est requis </small><br>
+                                    <small *ngIf="NumeroDeTelephone.errors.pattern" class="text-danger"> Numéro de téléphone est invalide</small><br>
+                                    <small *ngIf="NumeroDeTelephone.errors.minlength" class="text-danger"> Le numéro de téléphone doit contenir au moins 8 caractères</small><br>
+                                    <small *ngIf="NumeroDeTelephone.errors.maxlength" class="text-danger"> Le numéro de téléphone doit contenir au plus 13 caractères</small>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <label class="labels">Email</label>
+                                <input type="text" class="form-control" placeholder="entrer ton email" formControlName="Email">
+                                <div *ngIf="Email.touched && Email.invalid">
+                                    <small *ngIf="Email.errors.required" class="text-danger"> Email est requis </small><br>
+                                    <small *ngIf="Email.errors.pattern" class="text-danger"> Email est invalide</small>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <label class="labels">Mot de passe</label>
+                                <input type="password" class="form-control" placeholder="entrer ton mot de passe" formControlName="Password">
+                                <div *ngIf="Password.touched && Password.invalid">
+                                    <small *ngIf="Password.errors.required" class="text-danger"> Mot de passe est requis </small><br>
+                                    <small *ngIf="Password.errors.minlength" class="text-danger"> Mot de passe doit contenir au moin 8 caractéres</small>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-group mt-5 text-center">
+                            <button class="btn btn-primary profile-button" [disabled]="myForm.invalid" type="submit">Enregistrer mes informations</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</div>
+
+
